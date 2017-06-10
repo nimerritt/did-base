@@ -4,7 +4,9 @@ MAINTAINER Nicholas Merritt <nimerritt@gmail.com>
 # Install git and ssh
 RUN apk update && apk add --no-cache \
   bash \
+  bash-completion \
   git \
+  git-bash-completion \
   openssh \
   openssl \
   ca-certificates \
