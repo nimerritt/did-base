@@ -7,8 +7,8 @@ RUN apk update && apk add --no-cache \
   git \
   openssh \
   openssl \
-  ca-certificates
-RUN update-ca-certificates
+  ca-certificates \
+  docker
 
 COPY scripts/configure_git.sh /scripts/
 RUN /scripts/configure_git.sh
