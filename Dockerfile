@@ -10,5 +10,3 @@ RUN pacman -Sy --noconfirm  \
 
 COPY scripts/configure_git.sh /scripts/
 RUN /scripts/configure_git.sh
-
-ENTRYPOINT ["/bin/bash", "-l"]
