@@ -3,6 +3,7 @@ FROM alpine:edge
 MAINTAINER Nicholas Merritt <nimerritt@gmail.com>
 # Install git and ssh
 RUN apk update && apk add --no-cache \
+  curl \
   bash \
   bash-completion \
   git \
