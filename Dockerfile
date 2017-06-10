@@ -2,7 +2,7 @@ FROM alpine:edge
 
 MAINTAINER Nicholas Merritt <nimerritt@gmail.com>
 # Install git and ssh
-RUN apk update && apk add --no-cache git openssh 
+RUN apk update && apk add --no-cache bash git openssh 
 
 COPY scripts/configure_git.sh /scripts/
 RUN /scripts/configure_git.sh
