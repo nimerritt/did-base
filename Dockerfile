@@ -1,17 +1,10 @@
-FROM alpine:edge
+FROM base/archlinux
 
 MAINTAINER Nicholas Merritt <nimerritt@gmail.com>
-# Install git and ssh
-RUN apk update && apk add --no-cache \
-  curl \
-  bash \
-  bash-completion \
+
+RUN pacman -Sy --noconfirm  \
   git \
-  git-bash-completion \
-  openssh \
-  openssl \
-  ca-certificates \
-  docker
+  openssh 
 
 COPY scripts/configure_git.sh /scripts/
 RUN /scripts/configure_git.sh
